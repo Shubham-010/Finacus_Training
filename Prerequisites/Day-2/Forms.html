@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/design.css">
+    <title>Forms</title>
+</head>
+<body>
+    <div>
+    <form>
+        <!-- basic form elements -->
+    <label for="firstname"><strong>First Name:</strong></label>
+    <input id="firstname" type="text" name="firstname"></input><br>
+    <br>
+    <label for="lastname"><strong>Last Name:</strong></label>
+    <input id="lastname" type="text" name="lastname"></input>
+        <br>
+    
+    <br>
+    <label for="telephone"><strong>Telephone:</strong></label>
+    <input id="telephone" type="tel" name="telephone"><br>
+    <br> 
+
+    <label for="email"><strong>Email:</strong></label>
+    <input id="email" type="email" name="email"></input><br>
+    <br>
+
+    <label for="textmessage"><strong>Text Message:</strong></label>
+    <textarea id="textmessage"></textarea><br><br>
+    
+    <label for="country"><strong>Select Country:</strong></label>
+    
+    <!-- selection methods -->
+    <select id="country" name="selectCountry">
+        <option value="India">India</option>
+        <option value="USA">USA</option>
+        <option value="Japan">Japan</option>
+        <option value="Africa">Africa</option>
+        
+    </select><br><br>
+
+    <!-- radio selection method with fieldset -->
+    <fieldset>
+        <legend><strong>Select gender</strong></legend>
+    <input type="radio" id="male" name="gender" value="M"><label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="F"><label for="female">Female</label>
+    <input type="radio" id="others" name="gender" value="O"><label for="others">Others</label>
+    </fieldset><br><br>
+
+     <!-- checkbox selection method with fieldset -->
+     <fieldset id="carsback">
+        <legend><strong>Favourite Cars</strong></legend>
+    <input type="checkbox" id="Audi" name="Cars" value="Au"><label for="audi">Audi</label>
+    <input type="checkbox" id="Ferrari" name="Cars" value="Fe"><label for="ferrari">Ferrari</label>
+    <input type="checkbox" id="Mustang" name="Cars" value="Mu"><label for="mustang">Mustang</label>
+    </fieldset><br><br>
+
+
+    <input type="submit" value="submit"><br><br>
+    
+    <!-- table elements -->
+    <table class="tt">
+        <thead>
+            <th>Name </th>
+            <th>Car</th>
+            <th>Country</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Shubham</td>
+                <td>Mustang</td>
+                <td>India</td> 
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>Audi</td>
+                <td>USA</td> 
+            </tr>
+            <tfoot>
+                <tr>
+                    <td>Anyone</td>
+                    <td>All</td>
+                    <td>Everywhere</td> 
+                </tr>
+            </tfoot>
+        </tbody>
+    </table>
+    </form> 
+    </div> 
+    
+    <!-- box model -->
+
+    <div class="box-1">box-1</div>
+    <div class="box-2">box-2</div>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+/* type selector */
+div{
+    color: rgb(8, 20, 180);
+    text-align: center;
+    background-color: rgb(247, 148, 67);
+}
+/* class selector */
+.tt {
+ margin-left: auto;
+ margin-right: auto;
+ background-color: azure;
+ 
+}
+/* id selectors */
+#carsback{
+    background-color: floralwhite;
+}
+/* descendent selectors */
+select option{
+    color:blueviolet;
+    background-color: black;
+}
+
+.box-1{
+    padding: 10%;
+    border:3px solid black;
+    margin-bottom: 20px;
+    background-color: grey;
+}
+.box-2{
+    padding: 10%;
+    border:4px dotted black;
+    margin-bottom: 20px;
+    background-color: green;
+}
