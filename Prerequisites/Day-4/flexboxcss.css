@@ -1,0 +1,24 @@
+.container{
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.form-row{
+    padding: 10px 0;
+    display: flex;
+}
+.form-row label{
+    padding-right:10px ;
+}
+.form-row input{
+    flex:1;
+}
+
+.column-layout{
+    max-width: 1300px;
+    background-color: rgb(231, 20, 20);
+    margin: 40px auto 0 auto;
+    line-height: 1.65;
+    padding: 20px 50px;
+    display: flex;
+}
