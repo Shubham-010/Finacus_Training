@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<meta charset="utf-8">
+		<title> JavaScript</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/screen.css">
+		<link rel="stylesheet" href="css/lightbox.css">
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/cycle2.js"></script>
+		<script type="text/javascript" src="js/declarativeToggle.js"></script>
+		<script type="text/javascript" src="js/lightbox.min.js"></script>
+		
+	</head>
+	
+	<body>
+		
+		<header class="section">
+			
+			<!-- container -->
+			<div class="container">
+				<h1>My Website</h1>
+
+				<span data-toggle-target=".site-nav" class="toggle-btn">MENU</span>
+
+				<nav class="site-nav">
+					<ul class="group">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Portfolio</a></li>
+						<li class="hide-small"><a href="#">FAQs</a></li>
+						<li class="hide-small"><a href="#">Links</a></li>
+						<li><a href="#">Contact Us</a></li>
+					</ul>
+				</nav>
+			</div><!-- /container -->
+			
+		</header>
+		
+		<div class="content-area group section">
+			
+			<!-- container -->
+			<div class="container">
+				
+				<!-- row -->
+				<div class="row">
+					
+					<!-- col -->
+					<div class="col col-md-8 push-down-sm">
+						
+						<div class="cycle-slideshow" data-cycle-slides=".slide" data-cycle-pause-on-hover="true">
+							
+							<span class="cycle-prev">&laquo;</span>
+							<span class="cycle-next">&raquo;</span>
+							
+							<span class="cycle-pager"></span>
+							
+							<div class="slide">
+								<img src="images/bee.jpg" alt="Bee">
+
+								<div class="slide-text">
+									<h3>Bee Title Here!</h3>
+									<p>This is the caption or descriptive text for the bee slide. <a href="#" class="btn-a">Call to action!</a> </p>
+								</div>
+
+							</div>
+
+							<div class="slide">
+								<img src="images/duck.jpg" alt="Duck">
+
+								<div class="slide-text">
+									<h3>Duck Title Here!</h3>
+									<p>This is the caption or descriptive text for the duck slide.</p>
+								</div>
+
+							</div>
+
+							<div class="slide">
+								<img src="images/squirrel.jpg" alt="Squirrel">
+
+								<div class="slide-text">
+									<h3>Squirrel Title Here!</h3>
+									<p>This is the caption or descriptive text for the squirrel slide.</p>
+								</div>
+
+							</div>
+
+						</div>
+						<div class="thumbs group">
+						<a href="images/strawberry.jpg" data-lightbox="g1" data-title="This is Strawberry"><img src="images/strawberry-thumb.jpg" alt="Strawberry"></a>
+						<a href="images/bear.jpg" data-lightbox="g1" data-title="This is Bear "><img src="images/bear-thumb.jpg" alt="Bear"></a>
+						<a href="images/bee.jpg" data-lightbox="g1" data-title="This is Bee"><img src="images/bee-thumb.jpg" alt="Bee"></a>
+						<a href="images/dock.jpg" data-lightbox="g1" data-title="This is Dock "><img src="images/dock-thumb.jpg" alt="Dock"></a>
+						<a href="images/duck.jpg" data-lightbox="g1" data-title="This is Duck "><img src="images/duck-thumb.jpg" alt="Duck"></a>
+						<a href="images/squirrel.jpg" data-lightbox="g1" data-title="This is Squirrel"><img src="images/squirrel-thumb.jpg" alt="Squrriel"></a>
+						<a href="images/trees.jpg" data-lightbox="g1" data-title="This is tree"><img src="images/trees-thumb.jpg" alt="Trees"></a>
+						<a href="images/water.jpg" data-lightbox="g1" data-title="This is Water"><img src="images/water-thumb.jpg" alt="Water"></a>
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<span data-toggle-target=".sidebar" data-toggle-text="Hide it" class="toggle-btn read-more ">Read more...</span></p>
+						
+						
+
+
+						
+
+					</div><!-- /col -->
+					
+					<!-- col -->
+					<div class="col col-md-4 sidebar">
+						<h3>Sidebar Heading</h3>
+						<p>Sidebar Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+						
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						
+						<p>Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+					</div><!-- /col -->
+					
+				</div><!-- /row -->
+				
+			</div><!-- /container -->
+			
+		</div>
+
+		<footer>
+			<p>&copy; 2014 - This is the footer.</p>
+		</footer>
+		
+		
+	</body>
+	
+</html>
