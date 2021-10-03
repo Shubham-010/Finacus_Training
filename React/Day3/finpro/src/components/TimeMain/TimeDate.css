@@ -1,0 +1,26 @@
+.datess {
+    display: flex;
+    flex-direction: column;
+    width: 5.5rem;
+    height: 5.5rem;
+    border: 1px solid #ececec;
+    background-color: #2d4e4b;
+    color: white;
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .Timedate_Year {
+    font-size: 0.75rem;
+    font-weight: bold;
+  }
+  
+  .Timedate_Month {
+    font-size: 0.75rem;
+  }
+  
+  .Timedate_Day {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
