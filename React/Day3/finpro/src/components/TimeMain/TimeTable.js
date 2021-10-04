@@ -14,10 +14,8 @@ function TimeTable(props){
     return(<div>
     <div className="Table-date">
           <TimeDate Date1={props.Date1}/>
-        
-     
-        <div className="Table-Task"><h2>{task}</h2></div>
-        <div className="Table-Time">{time}</div>
+        <div className="Table-Task"><h2>{props.Task1}</h2></div>
+        <div className="Table-Time">{props.Time1}</div>
         <div className="Table-process">&#10003;{props.Process1}</div>
         <button onClick={clickhandler}> Updates</button></div></div>
     // <div><div className="container">   

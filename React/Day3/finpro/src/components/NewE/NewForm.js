@@ -6,7 +6,11 @@ const NewForm=(props)=>{
     const [enteredtime, setEnteredTime]=useState('');
     const [entereddate, setEnteredDate]=useState('');
     const [enteredprocess, setEnteredProcess]=useState('');
+    const [isValid, setisValid] = useState(true);
     const taskchangeHandler=(event)=>{
+        if(event.target.value.trim().length > 0){
+            setisValid(true);
+        }
         setEnteredTask(event.target.value);
     };
     const datechangeHandler=(event)=>{
@@ -20,10 +24,26 @@ const NewForm=(props)=>{
     };
     const submitHandler=(event)=>{
         event.preventDefault();
+        if (enteredtask.trim().length === 0 ){
+            setisValid(false);
+            return;
+        }
+        if (entereddate.trim().length === 0 ){
+            setisValid(false);
+            return;
+        }
+        if (enteredtime.trim().length === 0 ){
+            setisValid(false);
+            return;
+        }
+        if (enteredprocess.trim().length === 0 ){
+            setisValid(false);
+            return;
+        }
         const TableData={
             date:new Date(entereddate),
             task: enteredtask,
-            time: enteredtime,
+            time: +enteredtime,
             process: enteredprocess,
         };
         props.gosaveTableData(TableData);
@@ -37,26 +57,26 @@ const NewForm=(props)=>{
          <form onSubmit={submitHandler}>
              <div className="new-time__controls">
              <div className="new-time__control">
-                    <label>Date</label>
-                    <input type='date' value={entereddate} min="2019-01-01" max="2022-12-31" onChange={datechangeHandler}></input>
+                    <label style={{color: !isValid ? 'red':'white'}}>Date</label>
+                    <input style={{borderColor: !isValid ? 'red':'white', background: !isValid ? 'LightCoral':'white'}} type='date' value={entereddate} min="2019-01-01" max="2022-12-31" onChange={datechangeHandler}></input>
              </div>
              <div className="new-time__control">
-                    <label>Task</label>
-                    <input type='text' value={enteredtask} onChange={taskchangeHandler}></input>
+                    <label style={{color: !isValid ? 'red':'white'}}>Task</label>
+                    <input style={{borderColor: !isValid ? 'red':'white',background: !isValid ? 'LightCoral':'white'}} type='text' value={enteredtask} onChange={taskchangeHandler}></input>
              </div>
              <div className="new-time__control">
-                    <label>Time</label>
-                    <input type='time' value={enteredtime} onChange={timechangeHandler}></input>
+                    <label style={{color: !isValid ? 'red':'white'}}>Time</label>
+                    <input style={{borderColor: !isValid ? 'red':'white',background: !isValid ? 'LightCoral':'white'}} type='time' value={enteredtime} onChange={timechangeHandler}></input>
              </div>
              <div className="new-time__control">
-                    <label>Process</label>
-                    <select value={enteredprocess} onChange={processchangeHandler}>
+                    <label style={{color: !isValid ? 'red':'white'}}>Process</label>
+                    <select style={{borderColor: !isValid ? 'red':'white',background: !isValid ? 'LightCoral':'white'}} value={enteredprocess} onChange={processchangeHandler}>
                         <option value="Pending">Pending</option>
-                        <option value="completed">Completed</option>
-
-                    </select>
+                        <option value="Completed">Completed</option>
+                        </select>
             </div>
             <div className="new-time__actions">
+                    <button type="button" onClick={props.onCancel}>Cancel</button>
                     <button type="submit">Add Event</button>
              </div>
              </div>

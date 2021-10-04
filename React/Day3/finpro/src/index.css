@@ -31,16 +31,19 @@ html {
   font-family: 'Noto Sans JP', sans-serif;
   color: rgb(250, 250, 250);
   text-align: center;
+  
 }
 
 body {
   margin: 0;
    background-color: rgb(23, 138, 94);
+   background-image: url("./components/images/bg6.jpg");
+
  
   
 }
  .bgi{
-  background-image: url("./components/images/bg6.jpg");
+  
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
