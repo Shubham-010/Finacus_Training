@@ -1,5 +1,29 @@
 import React, { useState } from 'react';
 import './NewForm.css';
+import styled from 'styled-components';
+
+const Button = styled.button`
+    font: inherit;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #8b005d;
+  color: white;
+  background: #8b005d;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.26);
+  cursor: pointer;
+  
+&:focus {
+  outline: none;
+}
+
+&:hover,
+&:active {
+  background: #ac0e77;
+  border-color: #ac0e77;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.26);
+}
+
+`;
+
 
 const NewForm=(props)=>{
     const [enteredtask, setEnteredTask]=useState('');
@@ -56,28 +80,28 @@ const NewForm=(props)=>{
      
          <form onSubmit={submitHandler}>
              <div className="new-time__controls">
-             <div className="new-time__control">
-                    <label style={{color: !isValid ? 'red':'white'}}>Date</label>
-                    <input style={{borderColor: !isValid ? 'red':'white', background: !isValid ? 'LightCoral':'white'}} type='date' value={entereddate} min="2019-01-01" max="2022-12-31" onChange={datechangeHandler}></input>
+             <div className={`new-time__control ${!isValid ? 'invalid':''}`}>
+                    <label>Date</label>
+                    <input type='date' value={entereddate} min="2019-01-01" max="2022-12-31" onChange={datechangeHandler}></input>
              </div>
-             <div className="new-time__control">
-                    <label style={{color: !isValid ? 'red':'white'}}>Task</label>
-                    <input style={{borderColor: !isValid ? 'red':'white',background: !isValid ? 'LightCoral':'white'}} type='text' value={enteredtask} onChange={taskchangeHandler}></input>
+             <div className={`new-time__control ${!isValid ? 'invalid':''}`}>
+                    <label>Task</label>
+                    <input type='text' value={enteredtask} onChange={taskchangeHandler}></input>
              </div>
-             <div className="new-time__control">
-                    <label style={{color: !isValid ? 'red':'white'}}>Time</label>
-                    <input style={{borderColor: !isValid ? 'red':'white',background: !isValid ? 'LightCoral':'white'}} type='time' value={enteredtime} onChange={timechangeHandler}></input>
+             <div className={`new-time__control ${!isValid ? 'invalid':''}`}>
+                    <label>Time</label>
+                    <input type='time' value={enteredtime} onChange={timechangeHandler}></input>
              </div>
-             <div className="new-time__control">
-                    <label style={{color: !isValid ? 'red':'white'}}>Process</label>
-                    <select style={{borderColor: !isValid ? 'red':'white',background: !isValid ? 'LightCoral':'white'}} value={enteredprocess} onChange={processchangeHandler}>
+             <div className={`new-time__control ${!isValid ? 'invalid':''}`}>
+                    <label>Process</label>
+                    <select value={enteredprocess} onChange={processchangeHandler}>
                         <option value="Pending">Pending</option>
                         <option value="Completed">Completed</option>
                         </select>
             </div>
             <div className="new-time__actions">
-                    <button type="button" onClick={props.onCancel}>Cancel</button>
-                    <button type="submit">Add Event</button>
+                    <Button type="button" onClick={props.onCancel}>Cancel</Button>
+                    <Button type="submit">Add Event</Button>
              </div>
              </div>
          </form>

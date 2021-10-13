@@ -24,3 +24,14 @@
   .new-time__actions {
     text-align: right;
   }
+  .new-time__control.invalid input{
+    border-color: red;
+    background-color: rgb(243, 145, 145);
+  }
+  .new-time__control.invalid select{
+    border-color: red;
+    background-color: rgb(243, 145, 145);
+  }
+  .new-time__control.invalid label{
+    color: red;
+  }
