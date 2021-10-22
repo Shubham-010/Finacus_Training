@@ -20,6 +20,7 @@ const HardwareItem = (props) => {
     <li className={classes.hardware}>
       <div>
         <h3>{props.title}</h3>
+        <div className={classes.name}>{props.name}</div>
         <div className={classes.description}>{props.description}</div>
         <div className={classes.price}>{price}</div>
       </div>

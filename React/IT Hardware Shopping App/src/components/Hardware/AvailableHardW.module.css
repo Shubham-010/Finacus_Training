@@ -10,6 +10,14 @@
     margin: 0;
     padding: 0;
   }
+  .HardwareLoading{
+    text-align: center;
+    color: antiquewhite;
+  }
+  .HardwareError{
+    text-align: center;
+    color: red;
+  }
   
   @keyframes meals-appear {
     from {

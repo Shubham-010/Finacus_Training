@@ -1,0 +1,116 @@
+.about{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: rgb(209, 206, 206);
+
+}
+
+.aleft{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+    
+}
+.aright{
+    flex: 1;
+}
+.acard{
+    width: 60%;
+    height: 70vh;
+    border-radius: 30px;
+    position: relative;
+    overflow:hidden;
+    }
+.acardbg{
+    width: 60%;
+    height: 70vh;
+    border-radius: 30px;    
+    position: absolute;
+    top:50px;
+    left: 50px;
+    background-color: rgb(8, 6, 6);
+    }
+
+
+.img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+.awardimg{
+    width:120px;
+    height: 120px;
+    border-radius: 20px;
+}
+.atitle {
+    font-weight: 800;
+    color: #61892F;
+  }
+  
+  .asub {
+    margin: 20px 0px;
+  }
+  
+  .adesc{
+      font-weight: 300;
+  }
+  
+  .aaward{
+      margin-top: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+  .aawardtexts{
+    width: 70%;
+}
+
+.aawardtitle{
+    font-weight: bold;
+    color: #61892F;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width:480px) {
+    .a{
+      flex-direction: column;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .a-left {
+      width: 100%;
+    }
+
+    .a-card {
+      height: 30vh;
+    }
+
+    .a-card.bg, .a-award {
+      display: none;
+    }
+
+    .a-right{
+      padding: 20px;
+    }
+    .img{
+      width: 100%;
+      height: 90%;
+      object-fit: cover;
+      
+  }
+  .about{
+    height: 180vh;
+    display: flex;
+    align-items: center;
+    color: rgb(209, 206, 206);
+    flex-direction: column;
+
+}
+
+}

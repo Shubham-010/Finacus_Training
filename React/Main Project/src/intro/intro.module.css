@@ -1,0 +1,137 @@
+.intro{
+    display:flex;
+    height:  100vh;
+}
+
+.left{
+flex: 1;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+.right{
+flex: 1;
+position: relative;
+}
+.lwrapper{
+padding: 40px;
+height: 50%;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+.introi{
+font-size: 30px;
+font-weight: 300;
+color: rgb(74, 74, 79);
+}
+@keyframes pulseText {
+    0% {text-shadow: 0px 0px 8px rgba(12, 140, 16, 0.932);}
+    100% {text-shadow: 0px 0px 22px rgb(68, 248, 52);}
+  }
+.name{
+    animation: pulseText 1s ease-in-out infinite alternate;
+    font-size: 40px;
+    color: rgb(138, 211, 125);
+}
+.titleI{
+    height: 50px;
+    overflow: hidden;
+}
+@keyframes move {
+    25%{
+        transform: translateY(-50px);
+    }
+    55%{
+        transform: translateY(-100px);
+    }
+    75%{
+        transform: translateY(-150px);
+    }
+    100%{
+        transform: translateY(-200px);
+    }
+
+
+    
+}
+
+.titleIWrapper{
+    height: 100%;
+    animation: move 10s ease-in-out infinite  alternate ;
+
+}
+.item{
+    height: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #61892F;
+    display: flex;
+    align-items: center;
+}
+.iscroll {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: 20px;
+  }
+
+.description{
+ color: #61892F;
+ font-weight: bold;
+ padding-top: 20px;
+}
+
+.img1{
+    top: 230px;
+    left: 100px;
+    height: 41%;
+    width: 41%;
+    object-fit: cover;
+    position: absolute;
+    box-shadow:4px 4px 4px 4px rgb(77, 213, 9);
+    border-radius: 20%;
+}
+
+.ibg{
+    clip-path: polygon(40% 0%, 100% 0%, 70% 31%, 100% 70%, 900% 100%, 40% 100%, 0% 70%, 0% 30%);
+    background-color: rgb(236, 236, 232);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-color: solid 2px blueviolet;
+
+}
+@media screen and (max-width: 480px) {
+    .intro {
+      flex-direction: column;
+    }
+    .img1{
+        top: 70px;
+        left: 100px;
+        height: 61%;
+        width: 41%;
+        object-fit: cover;
+        position: absolute;
+        box-shadow:4px 4px 4px 4px rgb(77, 213, 9);
+        border-radius: 20%;
+    }
+    
+  
+    .lwrapper {
+    
+      padding: 10px;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 100%;
+    }
+  
+    .description{
+      display: none;
+    }
+    
+  }
